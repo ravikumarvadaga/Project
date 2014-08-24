@@ -19,14 +19,15 @@ Post interpreting the data this assignment  involved create one R script called 
 1.Merges the training and the test sets to create one data set.
   
   1.1 loading the follwing  files from the common folder (/.project)
-      subject_test.txt    - maps the subjects and observation id's for test data set
-      subject_train.txt   - maps the subjects and observation id's for training data set
-      activity_labels.txt - maps the ativityid's with activity labels
-      features.txt        - this provides the list of observation variables in the order that 
-      y_test.txt          - maps the activity id's with obervation id's in the test data set
-      y_train.txt         - maps the activity id's with obervation id's in the train data set
-      X_test.txt           - maps the observation id's with the Observations for test dataset
-      X_train.txt         -maps the observation id's with the Observations for train dataset
+  
+        subject_test.txt    - maps the subjects and observation id's for test data set
+        subject_train.txt   - maps the subjects and observation id's for training data set
+        activity_labels.txt - maps the ativityid's with activity labels
+        features.txt        - this provides the list of observation variables in the order that 
+        y_test.txt          - maps the activity id's with obervation id's in the test data set
+        y_train.txt         - maps the activity id's with obervation id's in the train data set
+        X_test.txt          - maps the observation id's with the Observations for test dataset
+        X_train.txt         -maps the observation id's with the Observations for train dataset
     
   1.2 Renaming the X_test and X_train datasets Column headers with the features dataset value
   
