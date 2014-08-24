@@ -1,5 +1,6 @@
 ## Assignment  step 1.Merges the training and the test sets to create one data set.
-## loading all the files from the common folder (/.project)
+
+## substep -loading all the files from the common folder (/.project)
 
 subject_test <- read.table("./project/subject_test.txt")
 subject_train <- read.table("./project/subject_train.txt")
@@ -10,24 +11,24 @@ y_train<-read.table("./project/y_train.txt")
 X_test<-read.table("./project/X_test.txt")
 X_train<-read.table("./project/X_train.txt")
 
-## renaming the X_test and X_train datasets Column headers with the features dataset value
+## substep - renaming the X_test and X_train datasets Column headers with the features dataset value
 
 colnames(X_test)<-features[,2]
 colnames(X_train)<-features[,2]
 
-## change the column names of the activity dataset (y_test,y_train) and subject dataset(subject_test)
+## substep -change the column names of the activity dataset (y_test,y_train) and subject dataset(subject_test)
 
 names(y_test)[names(y_test)=="V1"] <- "activityid"
 names(y_train)[names(y_train)=="V1"] <- "activityid"
 names(subject_train)[names(subject_train)=="V1"] <- "subjectid"
 names(subject_test)[names(subject_test)=="V1"] <- "subjectid"
 
-## Column bind the ActivitiesID and SubjectID to observations dataset X_test ,X_train
+## substep -Column bind the ActivitiesID and SubjectID to observations dataset X_test ,X_train
 
 combinedtest <- cbind(X_test,y_test,subject_test)
 combinedtrain <- cbind(X_train,y_train,subject_train)
 
-## Row bind the test and training data set -Create a total data set of test and train
+## substep -Row bind the test and training data set -Create a total data set of test and train
 
 total <-rbind(combinedtest,combinedtrain)
 
@@ -49,13 +50,13 @@ total$activityid[total$activityid == "6"]<-"LAYING"
 total$activityid<-as.factor(total$activityid)
 
 ## Assignment Step 4.Appropriately labels the data set with descriptive variable names.
-## lowercase all the variable names
+##  substep -lowercase all the variable names
 colnames(total)<-tolower(colnames(total))
-## remove underscores(_) 
+## substep -remove underscores(_) 
 colnames(total)<-sub("_","",colnames(total))
-## remove () from variable names
+## substep -remove () from variable names
 colnames(total)<-sub("\\()","",colnames(total))
-## remove typo bodybody with body (as seen in some of the variable names)
+##substep - remove typo bodybody with body (as seen in some of the variable names)
 colnames(total)<-sub("bodybody","body",colnames(total))
 
 ## Assignment Step 5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
@@ -63,7 +64,7 @@ colnames(total)<-sub("bodybody","body",colnames(total))
 
 totalnew<-melt(total,id = c("activityid","subjectid"),measures.vars=c("tbodyacc-mean()-X", "tbodyacc-mean()-Y"))
 
-## even though only 2 variables are mentioned in the above statement - measures.vars will take all the other variable in the datasets 
+## please note even though only 2 variables are mentioned in the above statement - measures.vars will take all the other variable in the datasets 
 ## which are not specifically mentioned as id
 ## final dataset for submission
 
