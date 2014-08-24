@@ -1,1 +1,101 @@
-This file provides the description and understanding of the different codesof the final output file i.e tidy data set.txt
+This file provides the description and understanding of the different codesof the final output file i.e tidy data set.txt created as part of the Course assignment for "Getting & Cleaning Data" -Part of the Coursera Data Science Specialization.
+
+The raw data was loaded into the R from the Project subdirectory in the wokrking directory
+
+The raw data for creating this tidy data set was based on the experiments that has  been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 
+
+The tidy data set has the average  of 79 variables for 30 subjects carrying out 6 activities .The following codes describes the activities ,Subjects and variables
+
+Activities -labeled as 
+
+ WALKING
+ WALKING_UPSTAIRS
+ WALKING_DOWNSTAIRS
+ SITTING
+ STANDING
+ LAYING
+ 
+ Subects are  labeled as
+ 
+ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+ 
+the list of 79 variables (listed below) are the average of the 79 variable means and standard deviations(std) . the interpreatation of the variable code is t(for time) ;f (for Fast Fourier Transform) ,x ,y and z - represents 3 axis for observations .The observations captured by accelerometer and gyroscope  are represented by acc and gyro .
+
+observation variable list
+ 
+ tbodyacc-mean-x          
+ tbodyacc-mean-y
+ tbodyacc-mean-z
+ tgravityacc-mean-z
+ tgravityacc-std-x  
+ tgravityacc-std-y
+ tgravityacc-std-z
+ tbodyaccjerk-mean-x
+ tbodyaccjerk-mean-y  
+ tbodyaccjerk-mean-z  
+ tbodyaccjerk-std-x   
+ tbodyaccjerk-std-y   
+ tbodyaccjerk-std-z     
+ tbodygyro-mean-x  
+ tbodygyro-mean-y
+ tbodygyro-mean-z 
+ tbodygyro-std-x     
+ tbodygyro-std-y  
+ tbodygyro-std-z   
+ tbodygyrojerk-mean-x  
+ tbodygyrojerk-mean-y  
+ tbodygyrojerk-mean-z 
+ tbodygyrojerk-std-x  
+ tbodygyrojerk-std-y   
+ tbodygyrojerk-std-z   
+ tbodyaccmag-mean      
+ tbodyaccmag-std    
+ tgravityaccmag-mean      
+ tgravityaccmag-std  
+ tbodyaccjerkmag-mean 
+ tbodyaccjerkmag-std  
+ tbodygyromag-mean   
+ tbodygyromag-std 
+ tbodygyrojerkmag-mean
+ tbodygyrojerkmag-std 
+ fbodyacc-mean-x  
+ fbodyacc-mean-y 
+ fbodyacc-mean-z 
+ fbodyacc-std-x 
+ fbodyacc-std-y 
+ fbodyacc-std-z 
+ fbodyacc-meanfreq-x 
+ fbodyacc-meanfreq-y     
+ fbodyacc-meanfreq-z  
+ fbodyaccjerk-mean-x    
+ fbodyaccjerk-mean-y   
+ fbodyaccjerk-mean-z  
+ fbodyaccjerk-std-x 
+ fbodyaccjerk-std-y   
+ fbodyaccjerk-std-z   
+ fbodyaccjerk-meanfreq-x
+ fbodyaccjerk-meanfreq-y 
+ fbodyaccjerk-meanfreq-z 
+ fbodygyro-mean-x   
+ fbodygyro-mean-y 
+ fbodygyro-mean-z 
+ fbodygyro-std-x  
+ fbodygyro-std-y    
+ fbodygyro-std-z   
+ fbodygyro-meanfreq-x
+ fbodygyro-meanfreq-y
+ fbodygyro-meanfreq-z 
+ fbodyaccmag-mean      
+ fbodyaccmag-std
+ fbodyaccmag-meanfreq 
+ fbodyaccjerkmag-mean 
+ fbodyaccjerkmag-std  
+ fbodyaccjerkmag-meanfreq 
+ fbodygyromag-mean    
+ fbodygyromag-std    
+ fbodygyromag-meanfreq 
+ fbodygyrojerkmag-mean 
+ fbodygyrojerkmag-std  
+ fbodygyrojerkmag-meanfreq
+ 
+ The resulting dataset is 180 rows (30subjects * 6 activities) -  81 columns (79 observations variable + 1 for subject id and 1 for activity id)
